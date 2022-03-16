@@ -9,9 +9,12 @@ include(../QtImGUI/QtImGUI.pri)
 
 # use boiler plate code
 HEADERS += \
+D2Coding-Ver1.3.2-20180524.ttf.h \
+NanumGothic.ttf.h
+
+HEADERS += \
 MainWindow.h \
-MainImGui.h \
-D2Coding-Ver1.3.2-20180524.ttf.h
+MainImGui.h
 
 SOURCES += \
 MainWindow.cpp \

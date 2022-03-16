@@ -33,12 +33,14 @@ void MainWindow::paintGL()
 {
     QtImGui::newFrame();
 
+    // Do render before ImGui UI is rendered
+    glViewport( 0, 0, width(), height() );
+    glClearColor( clear_color.x, clear_color.y, clear_color.z, clear_color.w );
+    glClear( GL_COLOR_BUFFER_BIT );
+
     renderImGui();
 
-    // Do render before ImGui UI is rendered
-    glViewport(0, 0, width(), height());
-    glClearColor(clear_color.x, clear_color.y, clear_color.z, clear_color.w);
-    glClear(GL_COLOR_BUFFER_BIT);
+    // TODO: Define your own redering of Qt/OpenGL
 
     ImGui::Render();
 }
