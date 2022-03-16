@@ -1,30 +1,33 @@
 ###############
-# qtimgui.pri
+# QtImGUI.pri
 ###############
 
-QT += core
-QT += gui
-QT += widgets
-QT += openglwidgets
-QT += opengl
+QT += core gui widgets opengl openglwidgets
 
 message('Print Working Directory')
 message($$PWD)
 
+isEmpty(IMGUI_ROOT) {
+    IMGUI_ROOT = $$PWD/../imgui
+}
+
 INCLUDEPATH += \
- $$PWD/imgui \
- $$PWD
+. \
+$$PWD
 
 HEADERS += \
- $$PWD/ImGuiRenderer.h \
- $$PWD/QtImGui.h
+$$PWD/ImGuiRenderer.h \
+$$PWD/QtImGui.h
 
 SOURCES += \
- $$PWD/ImGuiRenderer.cpp \
- $$PWD/QtImGui.cpp
+$$PWD/ImGuiRenderer.cpp \
+$$PWD/QtImGui.cpp
+
+INCLUDEPATH += \
+$${IMGUI_ROOT}
 
 SOURCES += \
- $$PWD/imgui/imgui_draw.cpp \
- $$PWD/imgui/imgui.cpp \
- $$PWD/imgui/imgui_demo.cpp \
- $$PWD/imgui/imgui_widgets.cpp
+$${IMGUI_ROOT}/imgui_draw.cpp \
+$${IMGUI_ROOT}/imgui.cpp \
+$${IMGUI_ROOT}/imgui_demo.cpp \
+$${IMGUI_ROOT}/imgui_widgets.cpp

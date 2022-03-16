@@ -1,14 +1,11 @@
 # hello-world.pro
-
-TARGET = hello-world-widget
-
+TARGET = hello-world
 TEMPLATE = app
+QT += core gui widgets # default module of QT
 
-# default module of QT
-QT += core gui widgets
-
-# include pri
-include(../qtimgui.pri)
+# Include pri & Set ImGUI direcotry
+IMGUI_ROOT = $$PWD/../imgui-1.76
+include(../QtImGUI/QtImGUI.pri)
 
 # use boiler plate code
 HEADERS += \
