@@ -358,11 +358,20 @@ void ImGuiRenderer::onKeyPressRelease(QKeyEvent *event)
         io.KeysDown[keyMap[event->key()]] = event->type() == QEvent::KeyPress;
     }
 
-    if (event->type() == QEvent::KeyPress) {
+    if (event->type() == QEvent::KeyPress)
+    {
+        // TODO: IME is needed for foreign lang.
+        quint32 uiModifiers = event->nativeModifiers();
+        quint32 uiNativeScanCode = event->nativeScanCode();
+        quint32 uiNativeVirtualKey = event->nativeVirtualKey();
+
         QString text = event->text();
-        if (text.size() == 1) {
-            io.AddInputCharacter(text.at(0).unicode());
+
+        if ( text.size() == 1 )
+        {
+            io.AddInputCharacter( text.at(0).unicode() );
         }
+
     }
 
 #ifdef Q_OS_MAC
