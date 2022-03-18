@@ -4,7 +4,6 @@
 
 #include <cstdlib>
 #include <cstdio>
-// #include <malloc>
 
 #include "D2Coding-Ver1.3.2-20180524.ttf.h"
 #include "NanumGothic.ttf.h"
@@ -20,7 +19,10 @@ MainImGui::MainImGui(ImVec4 clearColor)
 
     ImGui::CreateContext();
 
-    initFont();
+    if ( ! initFont() )
+    {
+        // Failed to set font
+    }
 
 
 }
@@ -42,8 +44,8 @@ bool MainImGui::initFont()
     unsigned int bufferLen = D2Coding_Ver1_3_2_20180524_ttf_len;
     memcpy( ptrBuffer, D2Coding_Ver1_3_2_20180524_ttf, bufferLen );
 
-    ImGui::GetIO().Fonts->AddFontFromMemoryTTF(
-                ptrBuffer, bufferLen, fontSize, NULL, ptrImWchar );
+    // add font(*.ttf) from memory data
+    ImGui::GetIO().Fonts->AddFontFromMemoryTTF( ptrBuffer, bufferLen, fontSize, NULL, ptrImWchar );
 
     return true;
 }
@@ -82,11 +84,14 @@ void MainImGui::renderImGui()
     // 2. Show another simple window, this time using an explicit Begin/End pair
     if (show_another_window)
     {
-        SetNextWindowSize(ImVec2(200,100), ImGuiCond_FirstUseEver);
+        SetNextWindowSize(ImVec2(400,100), ImGuiCond_FirstUseEver);
         Begin("Another Window", &show_another_window);
+
             Text("Hello 한글 漢字 ...");
-            char buf[1024];
-            InputText("Qoo", buf, 1024);
+
+            char buf[4096];
+            InputText("Input Text", buf, (4096-1)); // IME does not works in imgui 1.76
+
         End();
     }
 
