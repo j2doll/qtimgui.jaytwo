@@ -18,6 +18,8 @@ public:
     MainImGui(ImVec4 clearColor = ImColor(114, 144, 154));
     virtual ~MainImGui();
     void renderImGui();
+    bool initFont();
+
 protected:
     ImVec4 clear_color;
 // boiler-plate code }}
