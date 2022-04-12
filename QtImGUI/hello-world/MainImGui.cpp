@@ -6,7 +6,7 @@
 #include <cstdio>
 
 #include "D2Coding-Ver1.3.2-20180524.ttf.h"
-#include "NanumGothic.ttf.h"
+// #include "NanumGothic.ttf.h"
 
 // NOTE: For portability, use only standard C++ code or OpenGL code.
 
