@@ -5,10 +5,8 @@
 
 ///////////////////////////
 
-AbstractMainImGui::AbstractMainImGui(ImVec4 clearColor)
+AbstractMainImGui::AbstractMainImGui()
 {
-    clear_color = clearColor;
-
     ImGui::CreateContext();
 
     if ( ! initFont() )
@@ -49,12 +47,6 @@ bool AbstractMainImGui::initFont()
     return true;
 }
 
-//////////////////////////
-
-void AbstractMainImGui::renderImGui()
-{
-    // TODO: Define your oen redering of ImGUI
-}
 
 ///////////////////////////
 

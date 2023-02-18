@@ -12,8 +12,10 @@
 //////////////////////////
 
 MainImGui::MainImGui()
-    : AbstractMainImGui( ImColor(114, 144, 154) )
+    : AbstractMainImGui()
 {
+    clear_color = ImColor(114, 144, 154);
+
     show_test_window = true;
     show_another_window = false;
 }

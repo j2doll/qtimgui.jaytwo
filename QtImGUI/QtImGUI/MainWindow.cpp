@@ -2,15 +2,17 @@
 
 #include "MainWindow.h"
 
+MainWindow::MainWindow()
+#ifdef USE_OPEN_GL_WINDOW
+        : QOpenGLWindow()
+#else
+        : QOpenGLWidget()
+#endif
+{
+}
+
 MainWindow::~MainWindow()
 {
-    /*
-    if ( abstractMainImGui != nullptr )
-    {
-        delete abstractMainImGui;
-        abstractMainImGui = nullptr;
-    }
-    */
 }
 
 void MainWindow::initializeGL()
@@ -50,7 +52,6 @@ void MainWindow::renderImGui()
     if ( abstractMainImGui != nullptr )
     {
         abstractMainImGui->renderImGui();
-
     }
 }
 

@@ -20,6 +20,8 @@ public:
     void renderImGui();
 
 protected:
+    ImVec4 clear_color;
+
 // boiler-plate code }}
 
     bool show_test_window;

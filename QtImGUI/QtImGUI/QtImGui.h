@@ -1,7 +1,10 @@
+#ifndef QT_IMGUI_H
+#define QT_IMGUI_H
+
 #pragma once
 
-class QWidget;
-class QWindow;
+#include <QWidget>
+#include <QWindow>
 
 namespace QtImGui {
 
@@ -13,3 +16,5 @@ void initialize(QWindow *window);
 void newFrame();
 
 }
+
+#endif

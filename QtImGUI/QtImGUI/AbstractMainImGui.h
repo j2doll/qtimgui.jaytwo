@@ -8,14 +8,13 @@
 class AbstractMainImGui
 {
 public:
-    AbstractMainImGui( ImVec4 clearColor );
+    AbstractMainImGui();
     virtual ~AbstractMainImGui();
 
-    virtual bool initFont();
-    virtual void renderImGui();
+    virtual void renderImGui() = 0;
 
 protected:
-    ImVec4 clear_color;
+    virtual bool initFont();
 
 };
 

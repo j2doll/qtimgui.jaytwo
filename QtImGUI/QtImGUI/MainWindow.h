@@ -12,12 +12,13 @@
 #include <QOpenGLExtraFunctions>
 #include <QSurfaceFormat>
 
-#include <QtImGui.h>
 #include <imgui.h>
 
+#include "QtImGui.h"
 #include "AbstractMainImGui.h"
 
 #define USE_OPEN_GL_WINDOW
+// #define NOT_USE_OPEN_GL_WINDOW
 
 class MainWindow
 #ifdef USE_OPEN_GL_WINDOW
@@ -28,6 +29,7 @@ class MainWindow
         protected QOpenGLExtraFunctions
 {
 public:
+    MainWindow();
     virtual ~MainWindow();
 
     void initializeGL() override;

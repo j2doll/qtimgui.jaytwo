@@ -28,10 +28,11 @@ int main(int argc, char *argv[])
     }
     QSurfaceFormat::setDefaultFormat(glFormat);
 
-    // Show window
+    // [1] TODO : create your own main imgui class
     MainImGui mainImGui;
-    MainWindow mainWindow;
 
+    // [2] TODO : create main windows. and combine them.
+    MainWindow mainWindow;
     mainWindow.abstractMainImGui = &mainImGui;
     mainWindow.showMaximized();
 
