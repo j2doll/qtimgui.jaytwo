@@ -8,7 +8,6 @@
 
 #include <string>
 
-#include <imgui.h>
 #include <AbstractMainImGui.h>
 
 class MainImGui : public AbstractMainImGui
@@ -17,6 +16,7 @@ public:
     MainImGui();
     virtual ~MainImGui();
 
+    // TODO: write how to render
     void renderImGui();
 
 protected:

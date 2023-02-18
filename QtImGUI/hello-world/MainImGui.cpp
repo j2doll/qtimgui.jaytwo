@@ -1,15 +1,17 @@
 // MainImGui.cpp
 
-#include "MainImGui.h"
-
 #include <cstdlib>
 #include <cstdio>
+
+#include <imgui.h>
+
+#include "MainImGui.h"
 
 // NOTE: For portability, use only standard C++ code or OpenGL code.
 
 //////////////////////////
 
-MainImGui::MainImGui(ImVec4 clearColor)
+MainImGui::MainImGui()
     : AbstractMainImGui( ImColor(114, 144, 154) )
 {
     show_test_window = true;
@@ -19,7 +21,6 @@ MainImGui::MainImGui(ImVec4 clearColor)
 //////////////////////////
 
 MainImGui::~MainImGui()
-    : ~AbstractMainImGui()
 {
 }
 

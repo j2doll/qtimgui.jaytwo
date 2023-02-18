@@ -11,11 +11,19 @@ message($$PWD)
 # imgui
 
 isEmpty(IMGUI_ROOT) {
-    IMGUI_ROOT = $$PWD/../imgui
+    IMGUI_ROOT = $$PWD/../imgui-1.76
 }
 
 INCLUDEPATH += \
 $${IMGUI_ROOT}
+
+HEADERS += \
+$${IMGUI_ROOT}/imconfig.h \
+$${IMGUI_ROOT}/imgui.h \
+$${IMGUI_ROOT}/imgui_internal.h \
+$${IMGUI_ROOT}/imstb_rectpack.h \
+$${IMGUI_ROOT}/imstb_textedit.h \
+$${IMGUI_ROOT}/imstb_truetype.h
 
 SOURCES += \
 $${IMGUI_ROOT}/imgui_draw.cpp \

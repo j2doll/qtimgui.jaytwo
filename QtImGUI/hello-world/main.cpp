@@ -17,7 +17,7 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
 
     // Use OpenGL 3 Core Profile, when available
     QSurfaceFormat glFormat;
@@ -31,16 +31,17 @@ int main(int argc, char *argv[])
     // Show window
     MainImGui mainImGui;
     MainWindow mainWindow;
+
     mainWindow.abstractMainImGui = &mainImGui;
-    w.showMaximized();
+    mainWindow.showMaximized();
 
     // Update at 60 fps
     QTimer timer;
-    QObject::connect(&timer, SIGNAL(timeout()), &w, SLOT(update()));
+    QObject::connect(&timer, SIGNAL(timeout()), &mainWindow, SLOT(update()));
     int msec = 16;
     timer.start(msec); // 1000 msec / 16 = 62.5 fps
 
-    int ret = a.exec();
+    int ret = app.exec();
     return ret;
 }
 

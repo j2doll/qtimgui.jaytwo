@@ -25,8 +25,6 @@ void MainWindow::initializeGL()
     setWindowTitle(strWindowTitle);
 #endif
 
-    mainImGui = new MainImGui(clear_color);
-
     initializeOpenGLFunctions();
     QtImGui::initialize(this);
 }
@@ -51,7 +49,8 @@ void MainWindow::renderImGui()
 {
     if ( abstractMainImGui != nullptr )
     {
-        abstractMainImGui->abstractMainImGui();
+        abstractMainImGui->renderImGui();
+
     }
 }
 
