@@ -7,20 +7,19 @@
 // NOTE: For portability, use only standard C++ code or OpenGL code.
 
 #include <string>
-// using namespace std;
 
 #include <imgui.h>
+#include <AbstractMainImGui.h>
 
-class MainImGui
+class MainImGui : public AbstractMainImGui
 {
 public:
-    MainImGui(ImVec4 clearColor = ImColor(114, 144, 154));
+    MainImGui();
     virtual ~MainImGui();
+
     void renderImGui();
-    bool initFont();
 
 protected:
-    ImVec4 clear_color;
 // boiler-plate code }}
 
     bool show_test_window;

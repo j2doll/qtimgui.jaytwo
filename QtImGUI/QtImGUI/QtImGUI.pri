@@ -7,6 +7,9 @@ QT += core gui widgets opengl openglwidgets
 message('Print Working Directory')
 message($$PWD)
 
+##########################
+# imgui
+
 isEmpty(IMGUI_ROOT) {
     IMGUI_ROOT = $$PWD/../imgui
 }
@@ -20,8 +23,8 @@ $${IMGUI_ROOT}/imgui.cpp \
 $${IMGUI_ROOT}/imgui_demo.cpp \
 $${IMGUI_ROOT}/imgui_widgets.cpp
 
-RESOURCES += \
-imgui.qrc
+##########################
+# Qimgui
 
 INCLUDEPATH += \
 . \
@@ -31,9 +34,13 @@ HEADERS += \
 $$PWD/ImGuiRenderer.h \
 $$PWD/MainWindow.h \
 $$PWD/NanumGothic.ttf.h \
-$$PWD/QtImGui.h
+$$PWD/QtImGui.h \
+$$PWD/AbstractMainImGui.h
 
 SOURCES += \
 $$PWD/ImGuiRenderer.cpp \
 $$PWD/MainWindow.cpp \
-$$PWD/QtImGui.cpp
+$$PWD/QtImGui.cpp \
+$$PWD/AbstractMainImGui.cpp
+
+##########################

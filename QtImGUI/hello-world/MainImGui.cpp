@@ -5,55 +5,25 @@
 #include <cstdlib>
 #include <cstdio>
 
-#include "D2Coding-Ver1.3.2-20180524.ttf.h"
-// #include "NanumGothic.ttf.h"
-
 // NOTE: For portability, use only standard C++ code or OpenGL code.
 
-MainImGui::MainImGui(ImVec4 clearColor)
-{
-    clear_color = clearColor;
+//////////////////////////
 
+MainImGui::MainImGui(ImVec4 clearColor)
+    : AbstractMainImGui( ImColor(114, 144, 154) )
+{
     show_test_window = true;
     show_another_window = false;
-
-    ImGui::CreateContext();
-
-    if ( ! initFont() )
-    {
-        // Failed to set font
-    }
-
-
 }
 
-bool MainImGui::initFont()
-{
-    float fontSize = 16.0f; // font size
-    if ( ImGui::GetIO().Fonts == NULL )
-        return false;
-
-    // Korean
-    const ImWchar* ptrImWchar = ImGui::GetIO().Fonts->GetGlyphRangesKorean();
-    if ( ptrImWchar == NULL )
-        return false;
-    // const ImWchar* ptrImWchar = NULL;
-
-    // D2Coding font
-    void* ptrBuffer = malloc( D2Coding_Ver1_3_2_20180524_ttf_len );
-    unsigned int bufferLen = D2Coding_Ver1_3_2_20180524_ttf_len;
-    memcpy( ptrBuffer, D2Coding_Ver1_3_2_20180524_ttf, bufferLen );
-
-    // add font(*.ttf) from memory data
-    ImGui::GetIO().Fonts->AddFontFromMemoryTTF( ptrBuffer, bufferLen, fontSize, NULL, ptrImWchar );
-
-    return true;
-}
+//////////////////////////
 
 MainImGui::~MainImGui()
+    : ~AbstractMainImGui()
 {
-    ImGui::DestroyContext();
 }
+
+//////////////////////////
 
 void MainImGui::renderImGui()
 {
@@ -103,3 +73,6 @@ void MainImGui::renderImGui()
     }
 
 }
+
+//////////////////////////
+

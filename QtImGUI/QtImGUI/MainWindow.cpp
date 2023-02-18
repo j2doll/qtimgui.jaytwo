@@ -4,11 +4,13 @@
 
 MainWindow::~MainWindow()
 {
-    if ( mainImGui != nullptr )
+    /*
+    if ( abstractMainImGui != nullptr )
     {
-        delete mainImGui;
-        mainImGui = nullptr;
+        delete abstractMainImGui;
+        abstractMainImGui = nullptr;
     }
+    */
 }
 
 void MainWindow::initializeGL()
@@ -47,9 +49,9 @@ void MainWindow::paintGL()
 
 void MainWindow::renderImGui()
 {
-    if ( mainImGui != nullptr )
+    if ( abstractMainImGui != nullptr )
     {
-        mainImGui->renderImGui();
+        abstractMainImGui->abstractMainImGui();
     }
 }
 

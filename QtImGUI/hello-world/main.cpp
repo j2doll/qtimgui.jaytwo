@@ -13,6 +13,7 @@
 #include <imgui.h>
 
 #include "MainWindow.h"
+#include "MainImGui.h"
 
 int main(int argc, char *argv[])
 {
@@ -28,7 +29,9 @@ int main(int argc, char *argv[])
     QSurfaceFormat::setDefaultFormat(glFormat);
 
     // Show window
-    MainWindow w;
+    MainImGui mainImGui;
+    MainWindow mainWindow;
+    mainWindow.abstractMainImGui = &mainImGui;
     w.showMaximized();
 
     // Update at 60 fps

@@ -15,7 +15,7 @@
 #include <QtImGui.h>
 #include <imgui.h>
 
-#include "MainImGui.h"
+#include "AbstractMainImGui.h"
 
 #define USE_OPEN_GL_WINDOW
 
@@ -35,9 +35,10 @@ public:
 
     virtual void renderImGui();
 
+    AbstractMainImGui* abstractMainImGui;
+
 protected:
     ImVec4 clear_color;
-    MainImGui* mainImGui;
 
 };
 // boiler-plate code }}
