@@ -39,8 +39,10 @@ public:
 
     AbstractMainImGui* abstractMainImGui;
 
-protected:
     ImVec4 clear_color;
+
+protected:
+
 
 };
 // boiler-plate code }}

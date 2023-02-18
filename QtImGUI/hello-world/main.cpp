@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 
     // [2] TODO : create main windows. and combine them.
     MainWindow mainWindow;
+    mainWindow.clear_color = ImColor(114, 144, 154); // background color
     mainWindow.abstractMainImGui = &mainImGui;
     mainWindow.showMaximized();
 

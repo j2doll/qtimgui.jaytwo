@@ -9,6 +9,9 @@ MainWindow::MainWindow()
         : QOpenGLWidget()
 #endif
 {
+    abstractMainImGui = nullptr;
+
+    clear_color = ImColor(114, 144, 154); // background color
 }
 
 MainWindow::~MainWindow()
@@ -19,7 +22,6 @@ void MainWindow::initializeGL()
 {
     // TODO: define your configuration
     QString strWindowTitle = ""; // main window title. such as "QtImGui widget example";
-    clear_color = ImColor(114, 144, 154); // background color
 
 #ifdef USE_OPEN_GL_WINDOW
     setTitle(strWindowTitle);

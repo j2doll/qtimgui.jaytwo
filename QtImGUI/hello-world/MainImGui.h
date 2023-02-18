@@ -6,8 +6,6 @@
 
 // NOTE: For portability, use only standard C++ code or OpenGL code.
 
-#include <string>
-
 #include <AbstractMainImGui.h>
 
 class MainImGui : public AbstractMainImGui

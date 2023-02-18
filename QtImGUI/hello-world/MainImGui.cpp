@@ -3,6 +3,9 @@
 #include <cstdlib>
 #include <cstdio>
 
+#include <string>
+#include <iostream>
+
 #include <imgui.h>
 
 #include "MainImGui.h"
