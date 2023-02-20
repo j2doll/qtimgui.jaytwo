@@ -11,7 +11,7 @@
 class MainImGui : public AbstractMainImGui
 {
 public:
-    MainImGui();
+    MainImGui(float fontSize = 16.0f);
     virtual ~MainImGui();
 
     // TODO: write how to render

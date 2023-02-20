@@ -29,7 +29,8 @@ int main(int argc, char *argv[])
     QSurfaceFormat::setDefaultFormat(glFormat);
 
     // [1] TODO : create your own main imgui class
-    MainImGui mainImGui;
+    float fontSize = 24.0f; // font size
+    MainImGui mainImGui(fontSize);
 
     // [2] TODO : create main windows. and combine them.
     MainWindow mainWindow;

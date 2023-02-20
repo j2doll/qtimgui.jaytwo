@@ -5,15 +5,17 @@
 
 ///////////////////////////
 
-AbstractMainImGui::AbstractMainImGui()
+AbstractMainImGui::AbstractMainImGui(float fs)
 {
+    // float fontSize = 16.0f; // font size
+    fontSize = fs;
+
     ImGui::CreateContext();
 
     if ( ! initFont() )
     {
         // Failed to set font
     }
-
 }
 
 //////////////////////////
@@ -41,7 +43,6 @@ bool AbstractMainImGui::initFont()
     memcpy( ptrBuffer, NanumGothic_ttf, bufferLen );
 
     // add font(*.ttf) from memory data
-    float fontSize = 16.0f; // font size
     ImGui::GetIO().Fonts->AddFontFromMemoryTTF( ptrBuffer, bufferLen, fontSize, NULL, ptrImWchar );
 
     return true;

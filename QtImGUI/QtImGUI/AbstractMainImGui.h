@@ -8,10 +8,12 @@
 class AbstractMainImGui
 {
 public:
-    AbstractMainImGui();
+    AbstractMainImGui(float fontSize = 16.0f);
     virtual ~AbstractMainImGui();
 
     virtual void renderImGui() = 0;
+
+    float fontSize;
 
 protected:
     virtual bool initFont();

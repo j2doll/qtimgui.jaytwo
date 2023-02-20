@@ -14,8 +14,8 @@
 
 //////////////////////////
 
-MainImGui::MainImGui()
-    : AbstractMainImGui()
+MainImGui::MainImGui(float fontSize)
+    : AbstractMainImGui(fontSize)
 {
     clear_color = ImColor(114, 144, 154);
 
