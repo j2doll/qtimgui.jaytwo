@@ -1,10 +1,10 @@
 # QtImGUI 
 
 :kr: 
-- ImGUI 와 OpenGL 을 Qt 기반으로 구동.
-- boiler-plate 예제
+- Application wirh ImGUI and OpenGL based on Qt :kr: 아이엠지유와이와 오픈지엘의 큐트 기반인 어플리케이션
+- boiler-plate example :kr: 보일러 플레이트 예제
 
-## 예제 만드는 법
+## How to make an example :kr: 예제 만드는 법
 
 :one: hello-world.pro
 
