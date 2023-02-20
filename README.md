@@ -1,6 +1,6 @@
 # QtImGUI.jaytwo
 
-- Based on QtImGui https://github.com/seanchas116/qtimgui
+- Based on QtImGui https://github.com/seanchas116/qtimgui :+1:
 
 - Application with ImGUI and OpenGL based on Qt :kr: 아이엠지유와이와 오픈지엘의 큐트 기반인 어플리케이션
 - boiler-plate example :kr: 보일러 플레이트 예제
