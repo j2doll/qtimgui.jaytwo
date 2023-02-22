@@ -1,6 +1,7 @@
 # $${\color{green}QtImGUI.jaytwo }$$
 
 - Based on QtImGui :+1: https://github.com/seanchas116/qtimgui 
+   - QtImGui is under MIT license.
 
 - Application with ImGUI and OpenGL based on Qt :kr: 아이엠지유와이와 오픈지엘의 큐트 기반인 어플리케이션
 - Boiler-plate example :kr: 보일러 플레이트 예제
