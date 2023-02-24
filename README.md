@@ -1,4 +1,4 @@
-# $${\color{green}QtImGUI.jaytwo }$$
+# $${\color{blue}QtImGUI.jaytwo }$$
 
 - Based on QtImGui :+1: https://github.com/seanchas116/qtimgui 
    - QtImGui is under MIT license.
