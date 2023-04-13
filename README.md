@@ -155,6 +155,9 @@ void MainImGui::renderImGui()
 }
 ```
 
+## 기타
+
+- 한글 입력이 안되는 현상 있음 (Qt,ImGUI)
 
 
  
