@@ -9,7 +9,7 @@
 
 ## How to make an example :kr: 예제 만드는 법
 
-:one: hello-world.pro
+:one: create ```hello-world.pro```
 
 ```qmake
 include(../QtImGUI/QtImGUI.pri)
@@ -22,7 +22,7 @@ main.cpp \
 MainImGui.cpp
 ```
 
-:two: main.cpp
+:two: create ```main.cpp```
 
 ```cpp
 int main(int argc, char *argv[])
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-:three: MainImGui.h
+:three: create ```MainImGui.h```
 
 ```h
 class MainImGui : public AbstractMainImGui
