@@ -85,7 +85,7 @@ protected:
 // boiler-plate code }}
 ```
 
-:four: MainImGui.cpp
+:four: create ```MainImGui.cpp```
 
 ```cpp
 MainImGui::MainImGui()
